@@ -1,123 +1,605 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+}
+
 /* --------------------menu------------------------ */
 
-
 #menu {
-    display: flex;
-    white-space: nowrap;
-    padding-left: 20px;
-    padding-right: 20px;
- 
-  }
-  
+  display: flex;
+  white-space: nowrap;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+ul#menu li {
+  /* display: inline; */
+  font-size: 20px;
+  padding-left: 5px;
+  list-style: none;
+  font-family: "Bebas neue";
+}
+
+@media (min-width: 600px) {
   ul#menu li {
     /* display: inline; */
     font-size: 30px;
-    padding-left: 5px;
-    list-style: none;
-    font-family: "bebas neue" ;
-  }
-  
-  @media (min-width: 600px) {
-    ul#menu li {
-      /* display: inline; */
-      font-size: 30px;
-      padding-left: 10px;
-      padding-right: 10px;
-      
-    }
-  
-  }
-  
-  header {
-    position: sticky;
-    top: 0;
-    padding: 1rem 2rem;
-    /* box-shadow: 0 12px 28px 0 rgb(0 0 0 /30%); */
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    padding: 10px;
     padding-left: 10px;
-    background-color: rgba(255, 255, 255, 0.704);
-    z-index: 1;
-    
-  }
-  
-  .logo {
-    font-family: "bebas neue";
-    font-size: 50px;
     padding-right: 10px;
   }
+}
 
-  
-  header.logo.a {
-    font-size: 4rem;
+#grid_menu {
+  position: sticky;
+  top: 0;
+  padding: 1rem 2rem;
+  /* box-shadow: 0 12px 28px 0 rgb(0 0 0 /30%); */
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 10px;
+  padding-left: 10px;
+  background-color: rgba(255, 255, 255, 0.704);
+  z-index: 1;
+}
+
+.logo {
+  font-family: "bebas neue";
+  font-size: 50px;
+  padding-right: 10px;
+}
+
+#grid_menu.logo.link {
+  font-size: 4rem;
+}
+
+@media (min-width: 600px) {
+  .logo .link {
+    /* display: grid; */
+    grid-column: 1;
   }
-  
-  
-  @media (min-width: 600px) {
-    .logo a {
-      /* display: grid; */
-      grid-column: 1;
-  
-     
+}
+
+#grid_menu.nav.ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 0.4rem;
+  gap: 30px;
+  overflow-x: auto;
+}
+
+.link {
+  text-decoration: none;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+}
+
+.link:hover {
+  color: #490e3b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ----------------menu slut------------------------------- */
+
+/* Nulstilling af margin og padding på alle elementer, samt ændring af box model på alle elementer */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Normalisering af font og linjehøjde på dokumentets tekster, samt nedtoning af tekstfarven */
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  color: #2d2d2d;
+}
+
+/* Normalisering af billeder */
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+main {
+  max-width: 1000px;
+  margin-inline: auto;
+  padding-inline: 30px;
+  display: grid;
+  max-width: none;
+}
+
+/* hr {
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-bottom: 10%;
+    
+    border: 0;
+    border-top: 1px solid black;
+  }
+
+  .hr1 {
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-bottom: 10%;
+    margin-top: 10%;
+    border: 0;
+    border-top: 1px solid black;
+  }
+   */
+/*==================== Burgermenu =======================*/
+.toggle-btn {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .toggle-btn {
+    background: transparent;
+    border: none;
+    display: block;
+    height: 44px;
+    padding: 0.25rem;
+    cursor: pointer;
+    font-size: 23px;
+    font-family: "bebas neue";
+  }
+
+  nav {
+    display: none;
+  }
+
+  nav.shown {
+    border-top: 1px solid #000;
+    /* padding-top: 1rem; */
+    display: flex;
+    flex-flow: column;
+  }
+
+  nav ul {
+    display: flex;
+    flex-flow: column;
+  }
+}
+
+/*==================== Burgermenu slut =======================*/
+
+/*---------tilbage til toppen-----------*/
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 15px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 40px;
+  font-size: 10px;
+  font-family: "Cormorant Garamond", serif;
+}
+
+#myBtn:hover {
+  background-color: grey;
+}
+
+/* ----------------Index------------------------------- */
+
+#header_index {
+  margin: 30px;
+  display: grid;
+}
+
+.ul_index {
+  margin: 30px;
+  list-style: circle;
+  font-family: "bebas neue";
+  font-size: 30px;
+}
+
+.logo_index {
+  font-family: "bebas neue";
+  font-size: 70px;
+  padding-right: 10px;
+}
+
+.body_index {
+  background-image: linear-gradient(to right, rgb(175, 68, 141), pink, white);
+}
+
+/* -------------------Kategorier------------------------ */
+
+
+.kategorier {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+}
+
+.kat_h2 {
+  font-family: "bebas neue";
+  font-size: 30px;
+  padding-top: 2em;
+  padding-bottom: 1em;
+  color: #000;
+}
+
+.kategorier .kat_li {
+  text-decoration: none;
+  padding: 2em;
+  color: white;
+  background-image: linear-gradient(to right, rgb(228, 103, 124), pink);
+  font-family: "bebas neue";
+  text-align: center;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.kat_li:hover {
+  color: #490e3b;
+}
+
+@media (max-width: 600px) {
+  .kategorier {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 1em;
+  }
+}
+
+/* -------------------Kategorier slut------------------------ */
+
+
+
+/* -------------------Produktliste------------------------ */
+
+#main_produktliste {
+    margin: 2rem;
+    gap: 1rem;
+}
+
+.produktliste article {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.produktliste #main_produktliste {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2 rem;
+}
+
+@media (max-width: 600px) {
+    .produktliste #main_produktliste {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2 rem;
     }
-   
-  }
-  
-  header.nav.ul {
+    #main_produktliste {
+        margin: 0;
+    }
+    
+}
+
+.produktliste #main_produktliste .h2_produktliste {
+   grid-column: 1/-1;
+}
+
+.h2_produktliste {
+    font-size: 30px;
+    color: #000;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-family: "bebas neue";
+    
+    
+}
+
+.produktliste article .h3_produktliste {
+    font-size: 1.5em;
+    flex-grow: 3;
+    color: #000;
+    font-family: "bebas neue";
+    
+}
+
+p {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.subtl {
+    color: gray;
+}
+
+.produktliste  article .udsalgspris, .produktliste .pris span {
+    display: none;
+}
+
+
+.read_more {
+    color: black;
+}
+
+.read_more:hover {
+    color: rgb(198, 67, 89);
+}
+
+/* på udsalg */
+.udsalgspris > p {
+    margin-bottom: 0;
+}
+
+.udsalgspris p:last-child {
+    background-color: red;
+    padding: 0.2rem;
+}
+
+.produktliste .udsalg .pris span {
+    display: initial;
+}
+
+.produktliste .udsalg .udsalgspris {
     display: flex;
     justify-content: space-between;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    padding-bottom: 0.4rem;
-    gap: 30px;
-    overflow-x: auto;
-  }
-  
-  
-  
-  a {
-    text-decoration: none;
-    font-weight: 700;
-    color: rgb(0, 0, 0);
-  }
+}
 
-  
-  
-  a:hover {
-    color: #2c9feb;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
+/* udsolgt */
 
-  
-  /* ----------------menu slut------------------------------- */
+.produktliste .udsolgt img {
+    opacity: 0.5;
+}
 
-  /*---------tilbage til toppen-----------*/
-#myBtn {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 15px;
-    z-index: 99;
-    border: none;
-    outline: none;
-    background-color: black;
+.produktliste .udsolgt::before {
+    content: "Sold Out";
+    position: absolute;
+    background-color: gray;
     color: white;
-    cursor: pointer;
-    padding: 8px;
-    border-radius: 40px;
-    font-size: 10px;
-    font-family: "Cormorant Garamond", serif;
-  }
-  
-  #myBtn:hover {
-    background-color: grey;
-  }
-  
-  
+    padding: 1rem;
+}
+
+/* udsalg og udsolgt */
+
+.produktliste .udsalg_udsolgt .pris span {
+    display: initial;
+}
+
+.produktliste .udsalg_udsolgt .udsalgspris {
+    display: flex;
+    justify-content: space-between;
+}
+
+.produktliste .udsalg_udsolgt img {
+    opacity: 0.5;
+}
+
+.produktliste .udsalg_udsolgt::before {
+    content: "Sold Out";
+    position: absolute;
+    background-color: gray;
+    color: white;
+    padding: 1rem;
+}
+
+
+
+
+/* -------------------Produktliste slut------------------------ */
+
+
+
+/* -------------------Produkt------------------------ */
+
+/* Brødkrummetekst */
+.body_produkt .main_produkt .breadcrumbs, .body_produkt  {
+    grid-column: 1/-1;
+}
+
+.breadcrumbs {
+    display: flex;
+    font-size: 0.8rem;
+    list-style-type: none;
+}
+
+.breadcrumbs .li_bread::after {
+    content: ">";
+    font-size: 0.6rem;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 10px;
+    transition: all 0.3s;
+}
+
+ol {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 1.563rem;
+    list-style: decimal outside;
+}
+
+dt {
+    font-weight: bold;
+    font-family: "bebas neue";
+}
+
+.h2_produkt {
+    font-family: "bebas neue";
+    padding-top: 1rem;
+}
+
+.h3_produkt {
+    font-family: "bebas neue";
+}
+
+.dl_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.li_bread {
+    list-style-position: inside;
+    display: list-item;
+    
+}
+
+.link_bread {
+    color: #000;
+    text-decoration: underline;
+    text-decoration-color: gray;
+    border-radius: 5px;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 1px;
+}
+
+@media (max-width: 600px) {
+    .breadcrumbs {
+        display: none;
+    }
+
+}
+
+/* købe boks */
+
+.buy{
+    background-image: linear-gradient(to right, rgb(228, 103, 124), pink);
+    color: white;
+    padding: 1rem;
+    order: 2;
+    border-radius: 20px;
+   
+}
+
+
+
+form {
+    display: block;
+}
+
+.buy form label {
+    gap: 1rem;
+}
+
+label {
+    font-weight: bold;
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.h3_produkt {
+    font-family: "bebas neue";
+    font-size: 2rem;
+}
+
+.body_produkt #size {
+    min-width: 100px;
+}
+
+select {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: black;
+    height: 2.5rem;
+    background-color: white;
+
+    /* evt. tilføj en pil */
+    /* background-image: var(); 
+    background-repeat: no-repeat;
+    background-size: 1rem;
+    background-position: center right 0.5rem; */
+}
+
+option {
+    font-weight: normal;
+    display: block;
+    white-space: nowrap;
+    min-height: 1.2em;
+}
+
+.buy button {
+    display: block;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+button {
+    padding: 0.5rem 1.25rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid white;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    appearance: none;
+    line-height: initial;
+    user-select: none;
+    font-family: "bebas neue";
+    letter-spacing: 0.1rem;
+    
+}
+
+
+.buy button:hover {
+    background-color: rgb(245, 227, 236);
+    
+}
+
+
+
+
+.div_produkt {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 3rem;
+    max-width: 70%;
+    justify-self: center;
+}
+
+.img_produkt {
+    grid-column: 1 / 2;
+}
+
+.grid_produkt {
+   display: grid;
+   grid-template-columns: 1fr ;
+    
+}
+
+@media (max-width: 600px) {
+
+    .div_produkt {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 0rem;
+        max-width: 100%;
+        justify-self: center;
+    }
+
+    .img_produkt {
+        padding-bottom: 1rem;
+    }
+}
+
+
+
+
+/* -------------------Produkt slut------------------------ */
+
+
