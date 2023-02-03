@@ -49,6 +49,7 @@ ul#menu li {
   font-family: "bebas neue";
   font-size: 50px;
   padding-right: 10px;
+  
 }
 
 #grid_menu.logo.link {
@@ -215,8 +216,15 @@ main {
 }
 
 .body_index {
-  background-image: linear-gradient(to right, rgb(175, 68, 141), pink, white);
+  background-image: linear-gradient(to right, rgb(244, 227, 169), rgb(218, 181, 125), white);
 }
+
+.fashion {
+    width: 20%;
+    align-items: center;
+   
+}
+
 
 /* -------------------Kategorier------------------------ */
 
@@ -239,7 +247,7 @@ main {
   text-decoration: none;
   padding: 2em;
   color: white;
-  background-image: linear-gradient(to right, rgb(228, 103, 124), pink);
+  background-color: rgb(221, 201, 164);
   font-family: "bebas neue";
   text-align: center;
   font-size: 20px;
@@ -330,6 +338,7 @@ p {
 
 .read_more {
     color: black;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .read_more:hover {
@@ -342,8 +351,9 @@ p {
 }
 
 .udsalgspris p:last-child {
-    background-color: red;
-    padding: 0.2rem;
+    background-color: rgb(232, 236, 18);
+    padding: 0.3rem;
+    border-radius: 100px;
 }
 
 .produktliste .udsalg .pris span {
@@ -465,6 +475,10 @@ dt {
     text-decoration-thickness: 1px;
 }
 
+#img_produkt {
+    padding-right: 30px;
+}
+
 @media (max-width: 600px) {
     .breadcrumbs {
         display: none;
@@ -475,7 +489,8 @@ dt {
 /* købe boks */
 
 .buy{
-    background-image: linear-gradient(to right, rgb(228, 103, 124), pink);
+    background-color: rgb(221, 201, 164);
+   
     color: white;
     padding: 1rem;
     order: 2;
@@ -529,6 +544,7 @@ option {
     display: block;
     white-space: nowrap;
     min-height: 1.2em;
+    
 }
 
 .buy button {
@@ -557,7 +573,7 @@ button {
 
 
 .buy button:hover {
-    background-color: rgb(245, 227, 236);
+    background-color: rgb(245, 240, 227);
     
 }
 
