@@ -1,4 +1,4 @@
-const id = 1536;
+const id = 1535;
 
 const url = `https://kea-alt-del.dk/t7/api/products/${id}`;
 
