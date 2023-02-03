@@ -1,4 +1,4 @@
-const id = 1532;
+const id = 1536;
 
 const url = `https://kea-alt-del.dk/t7/api/products/${id}`;
 
@@ -19,6 +19,7 @@ function visProdukt(produkt) {
   document.querySelector("#season").textContent = produkt.season;
   document.querySelector("#brand").textContent = produkt.brandbio;
   document.querySelector("#pris").textContent = produkt.price;
+  document.querySelector("#article").textContent = produkt.articletype;
   
 }
 
