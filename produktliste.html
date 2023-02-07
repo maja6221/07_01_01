@@ -15,14 +15,15 @@
       <button class="toggle-btn">Menu</button>
       <nav id="header_nav">
         <ul id="menu">
-          <li><a class="link" href="kategori.html">Kategorier</a></li>
-          <li><a class="link" href="">Mærker</a></li>
-          <li><a class="link" href="">Sæsoner</a></li>
+          <li><a class="link" href="kategori.html">Categories</a></li>
+          <li><a class="link" href="">Brands</a></li>
+          <li><a class="link" href="">Seasons</a></li>
         </ul>
       </nav>
     </header>
 
     <main id="main_produktliste">
+      <button onclick="topFunction()" id="myBtn" title="Gå til top">↑</button>
       <h2 class="h2_produktliste">Produkter</h2>
 
       <!-- Produkt -->
@@ -43,7 +44,7 @@
             <p class="valuta">DKK,-</p>
           </div>
           <div class="udsalgspris">
-            <p>Now 593,34 DKK,-</p>
+            <p class="nypris">Now <span></span> DKK,-</p>
             <p>- <span class="procent">34</span> %</p>
           </div>
           <a class="read_more" href="produkt.html">Read More</a>
@@ -100,7 +101,7 @@
     </main>
 
     <footer></footer>
+    <script src="script.js"></script>
+    <script src="produktliste.js"></script>
   </body>
-  <script src="script.js"></script>
-  <script src="produktliste.js"></script>
 </html>
