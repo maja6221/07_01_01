@@ -20,6 +20,9 @@ function visData(json) {
     klon.querySelector(".brand").textContent = produkt.brandname;
     klon.querySelector(".pris").textContent = produkt.price;
     klon.querySelector(".procent").textContent = produkt.discount;
+    
+    klon.querySelector("a").href = "produkt.html?id=" + produkt.id;
+
     klon.querySelector(".img_produkt").src = `https://kea-alt-del.dk/t7/images/webp/640/${produkt.id}.webp`;
     if (produkt.soldout) {
         klon.querySelector("article").classList.add("soldOut");

@@ -1,4 +1,12 @@
-const id = 1544;
+//lav url search objekt
+const urlParams = new URLSearchParams(window.location.search);
+
+//find id
+console.log(urlParams);
+const id = urlParams.get("id");
+
+
+// const id = 1544;
 
 const url = `https://kea-alt-del.dk/t7/api/products/${id}`;
 
