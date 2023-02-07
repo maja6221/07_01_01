@@ -292,7 +292,7 @@ main {
 @media (max-width: 600px) {
     .produktliste #main_produktliste {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         gap: 2 rem;
     }
     #main_produktliste {
@@ -306,7 +306,7 @@ main {
 }
 
 .h2_produktliste {
-    font-size: 30px;
+    font-size: 50px;
     color: #000;
     margin-bottom: 1rem;
     margin-top: 1rem;
@@ -316,7 +316,7 @@ main {
 }
 
 .produktliste article .h3_produktliste {
-    font-size: 1.5em;
+    font-size: 1.2em;
     flex-grow: 3;
     color: #000;
     font-family: "bebas neue";
@@ -331,7 +331,7 @@ p {
     color: gray;
 }
 
-.produktliste  article .udsalgspris, .produktliste .pris span {
+.produktliste  article .udsalgspris, .produktliste .pris .span {
     display: none;
 }
 
@@ -345,33 +345,49 @@ p {
     color: rgb(198, 67, 89);
 }
 
+.type {
+    display: flex;
+    gap: 10px;
+}
+
+.valuta {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.pris_valuta {
+    display: flex;
+    gap: 10px;
+}
+
 /* på udsalg */
 .udsalgspris > p {
     margin-bottom: 0;
 }
 
 .udsalgspris p:last-child {
-    background-color: rgb(232, 236, 18);
+    background-color: rgb(240, 170, 57);
     padding: 0.3rem;
     border-radius: 100px;
 }
 
-.produktliste .udsalg .pris span {
+.produktliste .onSale .pris .span {
     display: initial;
 }
 
-.produktliste .udsalg .udsalgspris {
+.produktliste .onSale .udsalgspris {
     display: flex;
     justify-content: space-between;
 }
 
+
+
 /* udsolgt */
 
-.produktliste .udsolgt img {
+.produktliste .soldOut img {
     opacity: 0.5;
 }
 
-.produktliste .udsolgt::before {
+.produktliste .soldOut::before {
     content: "Sold Out";
     position: absolute;
     background-color: gray;
@@ -381,20 +397,20 @@ p {
 
 /* udsalg og udsolgt */
 
-.produktliste .udsalg_udsolgt .pris span {
+.produktliste .onSale .soldOut .pris .span {
     display: initial;
 }
 
-.produktliste .udsalg_udsolgt .udsalgspris {
+.produktliste .onSale .soldOut .udsalgspris {
     display: flex;
     justify-content: space-between;
 }
 
-.produktliste .udsalg_udsolgt img {
+.produktliste .onSale .soldOut img {
     opacity: 0.5;
 }
 
-.produktliste .udsalg_udsolgt::before {
+.produktliste .onSale .soldOut::before {
     content: "Sold Out";
     position: absolute;
     background-color: gray;
@@ -610,7 +626,15 @@ button {
 
     .img_produkt {
         padding-bottom: 1rem;
+
     }
+
+    #img_produkt {
+        padding-bottom: 10px;
+        padding-right: 0px;
+    }
+
+   
 }
 
 
